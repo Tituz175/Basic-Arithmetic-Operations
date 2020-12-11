@@ -1,13 +1,13 @@
 function rate() {
     var num01 = Number(document.getElementById("num1").value)
     var num02 = Number(document.getElementById("num2").value)
-    var act = document.getElementById("opera").value
+    var act = document.getElementById("opera").value.toLowerCase()
     var show
 
     if (act == "+" || act == "plus") {
         show = num01 + num02
     }
-    else if (act == "-" || act == "subtract") {
+    else if (act == "-" || act == "sub") {
         show = num01 - num02
     }
     else if (act == "/" || act == "divide") {
@@ -24,7 +24,6 @@ function rate() {
     }
     else if (act == "root") {
         var nu = 1 / num02
-        console.log(nu)
         show = num01 ** nu
     }
     document.getElementById("screen").innerHTML = show
